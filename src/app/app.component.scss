@@ -1,0 +1,27 @@
+footer {
+    height: 36px;
+    background: #f5f5f5;
+    color: rgba(0,0,0,0.87);
+    
+    & span {
+      font-size: 14px;
+      padding-right: 16px;
+    }
+  }
+  
+  .application {
+    height: 100%;
+  }
+  
+  .logo {
+    height:75%;
+  }
+  
+  .title {
+    margin-left: 16px;
+  }
+  
+  .spacer {
+    flex: 1 1 auto;
+  }
+  
