@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "vue-vs-angular-chat"
+  },
+  "targets": {
+    "vue-vs-angular-chat": {
+      "hosting": {
+        "angular-chat-example": [
+          "angular-chat-example-20190615"
+        ]
+      }
+    }
+  }
+}
