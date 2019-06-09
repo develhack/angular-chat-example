@@ -1,0 +1,39 @@
+.chat {
+    height: 100%;
+    padding: 1rem;
+
+    .posts {
+      overflow-y: auto;
+    
+      .post {
+        margin: 16px;
+        display: flex;
+        word-break: break-all;
+      
+        &:not(.self) {
+          place-content: center flex-start;
+        }
+
+        &.self {
+          place-content: center flex-end;
+      
+          .mat-card {
+            background-color: rgb(137,229,77);
+          }
+        }
+      
+        .grey--text {
+          color: #9e9e9e !important;
+          caret-color: #9e9e9e !important;
+        }
+      }
+    }
+    
+    form {
+      padding: 0 16px;
+      
+      & .mat-form-field {
+        padding-right: 16px;
+      }
+    }
+  }

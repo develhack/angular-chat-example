@@ -1,0 +1,56 @@
+<div
+  class="chat"
+  fxLayout="column"
+>
+  <div
+    #posts
+    class="posts"
+    fxFlex
+  >
+    <div
+      [class.self]="post.self"
+      *ngFor="let post of (posts$ | async); trackBy: postId"
+      class="post"
+    >
+      <mat-card>
+        <mat-card-content>
+          <div
+            *ngIf="!post.self"
+            class="grey--text"
+          >
+            <span>{{ post.poster }}</span>
+          </div>
+          <div>
+            <span>{{ post.message }}</span>
+          </div>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+  <form
+    (submit)="post()"
+    fxLayout="row"
+    fxLayoutAlign="start center"
+  >
+    <mat-form-field fxFlex="100">
+      <input
+        [(ngModel)]="message"
+        [disabled]="processing"
+        autocomplete="off"
+        name="message"
+        placeholder="メッセージ"
+        type="text"
+        autofocus
+        matInput
+      />
+    </mat-form-field>
+    <button
+      [disabled]="!message || processing"
+      color="primary"
+      type="submit"
+      mat-stroked-button
+    >
+      <span>送信</span>
+    </button>
+  </form>
+</div>
