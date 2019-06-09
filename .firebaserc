@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "vue-vs-angular-chat": {
+      "hosting": {
+        "angular-chat-example": [
+          "vue-vs-angular-chat"
+        ]
+      }
+    }
+  }
+}
